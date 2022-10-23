@@ -184,6 +184,7 @@ halloweenIsland["Halloween Hub"] = game:GetService("Workspace").Shops["Halloween
 halloweenIsland["Spooky Island"] = game:GetService("Workspace").Shops["Spooky Egg"].Part
 halloweenIsland["Nightmare Island"] = game:GetService("Workspace").Shops["Halloween Dominus Egg"].Part
 halloweenIsland["Pumpkin Island"] = game:GetService("Workspace").Shops["Pumpkin Egg"].Part
+halloweenIsland["Ghoul Island"] = game:GetService("Workspace").Shops["Ghoul Egg"].Part
 
 space = {}
 space["Space hub"] = game:GetService("Workspace").Shops["Alien Egg"].Part
