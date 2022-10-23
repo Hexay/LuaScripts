@@ -1,6 +1,3 @@
---Contact Hexay#4488 if you want to add anything or to report bugs
---Don't skid this, it's a tapping game lol
-
 --values
 getgenv().autoTap = false
 getgenv().autoRebirth = false
@@ -195,10 +192,6 @@ space["Toxic Planet"] = game:GetService("Workspace").Shops["Toxic Alien Egg"].Pa
 space["Asteroid Space"] = game:GetService("Workspace").Shops["Asteroid Egg"].Part
 space["Scrapyard"] = game:GetService("Workspace").Shops["Scrapyard Egg"].Part
 
-machines = {}
-machines["Rainbow Machine"] = game:GetService("Workspace").Proximity.RainbowMachine
-machines["Shiny Machine"] = game:GetService("Workspace").Proximity.ShinyMachine
-
 spawnKeys = {}
 for i in pairs(locations) do
     index = table.getn(spawnKeys)+1
@@ -230,11 +223,7 @@ for i in pairs(space) do
     spaceKeys[index] = i
 end
 
-macKeys = {}
-for i in pairs(machines) do
-    index = table.getn(macKeys)+1
-    macKeys[index] = i
-end
+
 --ui
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Tapping Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
@@ -522,20 +511,7 @@ Space:AddDropdown({
 	end    
 })
 
-local Machine = Teleports:AddSection({
-	Name = "Machines"
-})
 
-Machine:AddDropdown({
-	Name = "Machines (use space hub tele for all ^^)",
-	Default = "1",
-	Options = macKeys,
-	Callback = function(Value)
-        CFrame = machines[Value].CFrame
-        teleportTo(CFrame)
-		print(Value)
-	end    
-})
 Teleports:AddLabel("Made by Hexay#4488")
 local UpgradeBypass = Window:MakeTab({
     Name = "Upgrade",
