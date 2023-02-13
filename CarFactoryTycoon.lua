@@ -16,11 +16,7 @@ function autoBuild()
         end
     end)
 end
-
-function FillBucket(id) 
     
-end
-
 function autoFill()
     spawn(function()
         while getgenv().toggleAutoFill == true do
